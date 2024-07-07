@@ -6,3 +6,19 @@ html {
   font-size: 10px;   
   scroll-behavior: smooth; 
 }
+
+body {
+  font-family: "Georgia-regular";
+  @include font($size: 1.5rem, $height: 2.4rem);
+}
+
+h1 {
+  @include font($size: 3.2rem, $height: 3.52rem);
+  letter-spacing: 0.06em;
+  color: $color-primary;
+  margin: 0;
+}
+
+p {
+  font-family: 'Arial-regular';
+}
