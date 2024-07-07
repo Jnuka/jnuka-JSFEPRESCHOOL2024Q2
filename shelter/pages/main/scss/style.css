@@ -355,8 +355,17 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: 4.4rem;
+  line-height: 5.72rem;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
 p {
   font-family: "Arial-regular";
+  margin: 0;
 }
 
 .wrapper {
@@ -389,7 +398,6 @@ p {
   font-style: normal;
   letter-spacing: 0.1em;
   color: #FFFFFF;
-  margin: 0;
   margin-left: 3px;
 }
 
@@ -427,4 +435,45 @@ p {
 .-active .navigation__link {
   color: #FAFAFA;
   cursor: default;
+}
+
+.not-only {
+  background: url(./../../../assets/icons/noise_transparent@2x.png) repeat, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+}
+.not-only__wrapper {
+  margin-top: -105px;
+  padding-top: 180px;
+}
+.not-only__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 42px;
+}
+.not-only__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  margin-top: 163px;
+}
+.not-only__title {
+  max-width: 310px;
+  color: #FFFFFF;
+}
+.not-only__text {
+  color: #CDCDCD;
+}
+.not-only__button {
+  margin-top: 14px;
+}
+.not-only__link {
+  font-size: 1.7rem;
+  line-height: 2.21rem;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  background-color: #F1CDB3;
+  color: #292929;
+  border-radius: 100px;
+  padding: 16px 45px;
 }/*# sourceMappingURL=style.css.map */
