@@ -32,6 +32,7 @@
     border-radius: 9px;
     padding: 10px 14px 10px 60px;
     cursor: pointer;
+    @extend %transition;
     position: relative;
     &::before {
       content: '';
@@ -42,6 +43,11 @@
       background-repeat: no-repeat;
       left: 15px;
       top: 9px;
+    }
+    @media (hover:hover) {
+      &:hover {
+        background-color: $color-primary-light;
+      }
     }
     &-link {
       color: $color-title;

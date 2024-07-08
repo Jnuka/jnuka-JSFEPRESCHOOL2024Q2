@@ -324,7 +324,7 @@ template {
   font-family: "Georgia-bold";
   src: url("../../../assets/fonts/georgia/georgia-bold.woff2") format("woff2"), url("../../../assets/fonts/georgia/georgia-bold.woff") format("woff");
 }
-.card__button, .card, .friends__btn, .friends__arrow, .navigation__link {
+.donation__number, .card__button, .card, .friends__btn, .friends__arrow, .not-only__link, .navigation__link {
   transition: all 0.3s ease-out;
 }
 
@@ -579,6 +579,11 @@ p {
   border-radius: 100px;
   padding: 16px 45px;
 }
+@media (hover: hover) {
+  .not-only__link:hover {
+    background-color: #FDDCC4;
+  }
+}
 
 .about__wrapper {
   padding-top: 80px;
@@ -780,6 +785,11 @@ p {
   background-repeat: no-repeat;
   left: 15px;
   top: 9px;
+}
+@media (hover: hover) {
+  .donation__number:hover {
+    background-color: #FDDCC4;
+  }
 }
 .donation__number-link {
   color: #545454;
