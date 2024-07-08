@@ -405,11 +405,12 @@ p {
   padding-top: 28px;
   padding-bottom: 28px;
 }
-.header__logo {
+.header__logo-link {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  cursor: default;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .logo {
