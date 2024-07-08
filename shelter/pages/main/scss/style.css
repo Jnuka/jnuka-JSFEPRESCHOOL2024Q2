@@ -401,10 +401,11 @@ p {
   padding-top: 27px;
   padding-bottom: 15px;
 }
-.header__logo {
+.header__logo-link {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  text-decoration: none;
   cursor: default;
 }
 
