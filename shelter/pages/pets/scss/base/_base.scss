@@ -22,6 +22,7 @@ h1 {
 h2 {
   @include font($size: 4.4rem, $height: 5.72rem);
   margin: 0;
+  color: $color-title;
 }
 
 h3 {
@@ -32,7 +33,7 @@ h3 {
 }
 
 h4 {
-  @include font($size: 2.0rem, $height: 2.3rem);
+  @include font($size: 2.0rem, $height: 2.272rem);
   color: $color-title;
   letter-spacing: 0.06em;
   margin: 0;

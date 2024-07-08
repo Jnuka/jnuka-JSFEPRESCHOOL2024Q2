@@ -324,7 +324,7 @@ template {
   font-family: "Georgia-bold";
   src: url("../../../assets/fonts/georgia/georgia-bold.woff2") format("woff2"), url("../../../assets/fonts/georgia/georgia-bold.woff") format("woff");
 }
-.navigation__link {
+.pagination__button, .card__button, .card, .navigation__link {
   transition: all 0.3s ease-out;
 }
 
@@ -361,6 +361,7 @@ h2 {
   font-weight: 400;
   font-style: normal;
   margin: 0;
+  color: #545454;
 }
 
 h3 {
@@ -375,7 +376,7 @@ h3 {
 
 h4 {
   font-size: 2rem;
-  line-height: 2.3rem;
+  line-height: 2.272rem;
   font-weight: 400;
   font-style: normal;
   color: #545454;
@@ -540,4 +541,114 @@ p {
 .-active .navigation__link {
   color: #292929;
   cursor: default;
+}
+
+.friends {
+  background-color: #F6F6F6;
+}
+.friends__wrapper {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.friends__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+.friends__title {
+  text-align: center;
+}
+.friends__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.friends__pagination {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .card:hover {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  }
+  .card:hover .card__button {
+    border: 2px solid #FDDCC4;
+    background-color: #FDDCC4;
+  }
+}
+.card__name {
+  line-height: 2.27rem;
+}
+.card__button {
+  font-size: 1.7rem;
+  line-height: 2.21rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  background-color: transparent;
+  color: #292929;
+  padding: 13px 43px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.pagination__button {
+  color: #292929;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .pagination__button:hover {
+    border: 2px solid #FDDCC4;
+    background-color: #FDDCC4;
+  }
+}
+.pagination__button-inactive {
+  border: 2px solid #CDCDCD;
+  color: #CDCDCD;
+  cursor: default;
+}
+@media (hover: hover) {
+  .pagination__button-inactive:hover {
+    border: 2px solid #CDCDCD;
+    background-color: transparent;
+  }
+}
+.pagination__button-active {
+  background-color: #F1CDB3;
+  cursor: default;
+}
+@media (hover: hover) {
+  .pagination__button-active:hover {
+    border: 2px solid #F1CDB3;
+    background-color: #F1CDB3;
+  }
 }/*# sourceMappingURL=style.css.map */
