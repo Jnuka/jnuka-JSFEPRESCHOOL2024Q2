@@ -1,0 +1,103 @@
+.friends {
+  background-color: $color-bg-gray;
+  &__wrapper {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 53px;
+  }
+  &__arrow { 
+    width: 52px;
+    height: 52px;
+    background-color: transparent;
+    background-image: url(./../../../assets/icons/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 23px 19px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    @extend %transition;
+    cursor: pointer;
+    @media (hover:hover) {
+      &:hover {
+        border: 2px solid $color-primary-light;
+        background-color: $color-primary-light;
+      }
+    }
+    &-prev {
+      // background-image: url(./../../../assets/icons/arrow.svg);
+    }
+    &-next {
+      transform: rotate(.5turn);
+    }
+  }
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 90px;
+  }
+  &__btn {
+    @include font($size: 1.7rem, $height: 2.21rem);
+    letter-spacing: 0.06em;
+    background-color: $color-primary;
+    text-decoration: none;
+    color: $color-text-button;
+    border-radius: 100px;
+    padding: 15px 45px;
+    @extend %transition;
+    @media (hover:hover) {
+      &:hover {
+        background-color: $color-primary-light;
+      }
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: $color-title-active;
+  border-radius: 9px;
+  padding-bottom: 30px;
+  cursor: pointer;
+  @extend %transition;
+  @media (hover:hover) {
+    &:hover{
+      background-color: $color-light;
+      box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+      .card__button {
+        border: 2px solid $color-primary-light;
+        background-color: $color-primary-light;
+      }
+    }
+  }
+  &__name {
+    line-height: 2.27rem;
+  }
+  &__button {
+    @include font($size: 1.7rem, $height: 2.21rem);
+    letter-spacing: 0.06em;
+    background-color: transparent;
+    color: $color-text-button;
+    padding: 13px 43px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    cursor: pointer;
+    @extend %transition;
+  }
+}
