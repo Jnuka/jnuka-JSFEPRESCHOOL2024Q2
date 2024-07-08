@@ -363,6 +363,16 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  font-size: 3.5rem;
+  line-height: 4.55rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #545454;
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+
 p {
   font-family: "Arial-regular";
   margin: 0;
@@ -476,4 +486,26 @@ p {
   color: #292929;
   border-radius: 100px;
   padding: 16px 45px;
+}
+
+.about {
+  margin-bottom: 1000px;
+}
+.about__wrapper {
+  padding-top: 80px;
+}
+.about__content {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  max-width: 430px;
+}
+.about__title {
+  max-width: 350px;
 }/*# sourceMappingURL=style.css.map */

@@ -24,6 +24,13 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  @include font($size: 3.5rem, $height: 4.55rem);
+  color: $color-title;
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+
 p {
   font-family: 'Arial-regular';
   margin: 0;
