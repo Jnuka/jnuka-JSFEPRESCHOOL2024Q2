@@ -4,3 +4,11 @@
   font-weight: $weight;
   font-style: $style;
 }
+
+@mixin highlights-colors ($color) {
+  * {
+      &::selection{
+          background: $color;
+      }
+  }
+}

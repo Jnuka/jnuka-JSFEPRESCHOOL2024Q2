@@ -344,6 +344,12 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+body *::-moz-selection {
+  background: #fce3c6;
+}
+body *::selection {
+  background: #fce3c6;
+}
 
 h1 {
   font-size: 3.2rem;
@@ -385,7 +391,18 @@ h4 {
 
 p {
   font-family: "Arial-regular";
+  color: #4C4C4C;
   margin: 0;
+}
+
+.header *::-moz-selection, .footer *::-moz-selection, .not-only *::-moz-selection {
+  background: #b18663;
+}
+
+.header *::selection,
+.footer *::selection,
+.not-only *::selection {
+  background: #b18663;
 }
 
 .wrapper {

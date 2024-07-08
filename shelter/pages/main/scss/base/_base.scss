@@ -10,6 +10,7 @@ html {
 body {
   font-family: "Georgia-regular";
   @include font($size: 1.5rem, $height: 2.4rem);
+  @include highlights-colors($color: $color-selection-light);
 }
 
 h1 {
@@ -40,5 +41,12 @@ h4 {
 
 p {
   font-family: 'Arial-regular';
+  color: $color-text-light;
   margin: 0;
+}
+
+.header,
+.footer,
+.not-only {
+  @include highlights-colors($color: $color-selection-dark);
 }
