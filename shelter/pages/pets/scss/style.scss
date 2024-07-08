@@ -6,10 +6,12 @@
 @import "./../../main/scss/abstract/placeholders";
 
 // Base
-@import "./../../main/scss/base/base"; 
+@import "base/base"; 
 
 // Layout 
 @import "./../../main/scss/layout/wrapper";
+@import "layout/header";
 @import "./../../main/scss/layout/footer";
 
 // Components
+@import "components/navigation";

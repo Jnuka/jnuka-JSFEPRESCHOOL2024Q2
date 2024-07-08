@@ -324,6 +324,10 @@ template {
   font-family: "Georgia-bold";
   src: url("../../../assets/fonts/georgia/georgia-bold.woff2") format("woff2"), url("../../../assets/fonts/georgia/georgia-bold.woff") format("woff");
 }
+.navigation__link {
+  transition: all 0.3s ease-out;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -347,7 +351,7 @@ h1 {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.06em;
-  color: #F1CDB3;
+  color: #545454;
   margin: 0;
 }
 
@@ -388,6 +392,36 @@ p {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
+}
+
+.header {
+  background-color: #FFFFFF;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: default;
+}
+
+.logo {
+  margin-top: 3px;
+}
+.logo__subtitle {
+  font-size: 1.3rem;
+  line-height: 1.495rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: #292929;
+  margin-left: 3px;
 }
 
 .footer {
@@ -470,4 +504,40 @@ p {
 }
 .footer__visit .footer__link {
   padding-left: 41px;
+}
+
+.navigation {
+  font-family: "Arial-regular";
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 1px;
+}
+.navigation__link {
+  text-decoration: none;
+  color: #545454;
+}
+@media (hover: hover) {
+  .navigation__link:hover {
+    color: #292929;
+  }
+}
+
+.-active {
+  position: relative;
+}
+.-active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #F1CDB3;
+  bottom: -2px;
+  left: 0;
+}
+.-active .navigation__link {
+  color: #292929;
+  cursor: default;
 }/*# sourceMappingURL=style.css.map */

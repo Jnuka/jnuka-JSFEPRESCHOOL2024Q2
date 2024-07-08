@@ -1,0 +1,26 @@
+.header {
+  background-color: $color-light;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: default;
+  }
+}
+
+.logo {
+  margin-top: 3px;
+  &__subtitle {
+    @include font($size: 1.3rem, $height: 1.495rem);
+    letter-spacing: 0.1em;
+    color: $color-text-button;
+    margin-left: 3px;
+  }
+}
