@@ -337,6 +337,18 @@ html {
   scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #F1CDB3;
+}
+
 body {
   font-family: "Georgia-regular";
   font-size: 1.5rem;
