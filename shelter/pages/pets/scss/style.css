@@ -420,6 +420,11 @@ p {
   margin: 0 auto;
   padding: 0 40px;
 }
+@media (max-width: 1130px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
 
 .header {
   background-color: #FFFFFF;
