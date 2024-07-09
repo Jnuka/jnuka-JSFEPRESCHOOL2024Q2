@@ -719,6 +719,11 @@ p {
   align-items: center;
   gap: 53px;
 }
+@media (max-width: 1270px) {
+  .friends__inner {
+    gap: 12px;
+  }
+}
 .friends__arrow {
   width: 52px;
   height: 52px;
@@ -744,6 +749,16 @@ p {
   display: flex;
   justify-content: space-between;
   gap: 90px;
+}
+@media (max-width: 1270px) {
+  .friends__cards {
+    gap: 40px;
+  }
+}
+@media (max-width: 1110px) {
+  .friends__cards {
+    max-width: 580px;
+  }
 }
 .friends__btn {
   font-size: 1.7rem;
@@ -781,6 +796,11 @@ p {
   .card:hover .card__button {
     border: 2px solid #FDDCC4;
     background-color: #FDDCC4;
+  }
+}
+@media (max-width: 1110px) {
+  .card:last-child {
+    display: none;
   }
 }
 .card__name {

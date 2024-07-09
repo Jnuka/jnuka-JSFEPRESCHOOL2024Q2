@@ -18,6 +18,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 53px;
+    @media (max-width: ($desktop-width - 10px)) {
+      gap: 12px;
+    }
   }
   &__arrow { 
     width: 52px;
@@ -37,9 +40,6 @@
         background-color: $color-primary-light;
       }
     }
-    &-prev {
-      // background-image: url(./../../../assets/icons/arrow.svg);
-    }
     &-next {
       transform: rotate(.5turn);
     }
@@ -48,6 +48,13 @@
     display: flex;
     justify-content: space-between;
     gap: 90px;
+    @media (max-width: ($desktop-width - 10px)) {
+      gap: 40px;
+    }
+    @media (max-width: ($desktop-width - 170px)) {
+      max-width: 580px;
+    }
+
   }
   &__btn {
     @include font($size: 1.7rem, $height: 2.21rem);
@@ -84,6 +91,11 @@
         border: 2px solid $color-primary-light;
         background-color: $color-primary-light;
       }
+    }
+  }
+  @media (max-width: ($desktop-width - 170px)) {
+    &:last-child {
+      display: none;
     }
   }
   &__name {
