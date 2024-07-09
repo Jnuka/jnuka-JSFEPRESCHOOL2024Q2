@@ -3,12 +3,19 @@
   &__wrapper {
     padding-top: 80px;
     padding-bottom: 99px;
+    @media (max-width: ($table-width - 40px)) {
+      padding-top: 42px;
+      padding-bottom: 42px;
+    }
   }
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 60px;
+    @media (max-width: ($table-width - 40px)) {
+      gap: 42px;
+    }
   }
   &__title {
     text-align: center;
@@ -20,6 +27,11 @@
     gap: 53px;
     @media (max-width: ($desktop-width - 10px)) {
       gap: 12px;
+    }
+    @media (max-width: ($table-width - 40px)) {
+      display: grid;
+      grid-template-columns: repeat(2, 135px);
+      gap: 20px 0;
     }
   }
   &__arrow { 
@@ -40,8 +52,17 @@
         background-color: $color-primary-light;
       }
     }
+    &-prev {
+      @media (max-width: ($table-width - 40px)) {
+        grid-row: 2 / 2;
+        margin-left: 43px;
+      }
+    }
     &-next {
       transform: rotate(.5turn);
+      @media (max-width: ($table-width - 40px)) {
+        margin-left: 40px;
+      }
     }
   }
   &__cards {
@@ -52,9 +73,9 @@
       gap: 40px;
     }
     @media (max-width: ($desktop-width - 170px)) {
-      max-width: 580px;
+      max-width: 580px;      
+      grid-column: 1 / 3;
     }
-
   }
   &__btn {
     @include font($size: 1.7rem, $height: 2.21rem);
@@ -95,6 +116,11 @@
   }
   @media (max-width: ($desktop-width - 170px)) {
     &:last-child {
+      display: none;
+    }
+  }
+  @media (max-width: ($table-width - 40px)) {
+    &:nth-child(2) {
       display: none;
     }
   }
