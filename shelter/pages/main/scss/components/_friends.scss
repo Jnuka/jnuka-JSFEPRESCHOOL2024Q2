@@ -126,6 +126,9 @@
   }
   &__name {
     line-height: 2.27rem;
+    @media (max-width: ($table-width - 40px)) {
+      @include font($size: 2.0rem, $height: 2.3rem);
+    }
   }
   &__button {
     @include font($size: 1.7rem, $height: 2.21rem);

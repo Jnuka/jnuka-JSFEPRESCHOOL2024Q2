@@ -1061,6 +1061,14 @@ p {
 .card__name {
   line-height: 2.27rem;
 }
+@media (max-width: 728px) {
+  .card__name {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
 .card__button {
   font-size: 1.7rem;
   line-height: 2.21rem;
