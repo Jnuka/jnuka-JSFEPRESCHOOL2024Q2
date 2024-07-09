@@ -16,6 +16,9 @@
       }
     }
   }
+  @media (max-width: ($table-width - 10px)) {
+    display: none;
+  }
 }
 
 .-active {

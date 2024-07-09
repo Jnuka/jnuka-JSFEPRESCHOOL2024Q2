@@ -425,6 +425,11 @@ p {
     padding: 0 30px;
   }
 }
+@media (max-width: 758px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+}
 
 .header {
   background-color: #FFFFFF;
