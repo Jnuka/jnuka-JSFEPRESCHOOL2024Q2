@@ -1104,6 +1104,12 @@ p {
     padding-bottom: 100px;
   }
 }
+@media (max-width: 758px) {
+  .donation__wrapper {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
 .donation__content {
   display: flex;
   justify-content: center;
@@ -1121,6 +1127,11 @@ p {
     order: 2;
   }
 }
+@media (max-width: 758px) {
+  .donation__img {
+    width: clamp(260px, 67vw, 505px);
+  }
+}
 .donation__inner {
   display: flex;
   flex-direction: column;
@@ -1134,16 +1145,34 @@ p {
     order: 1;
   }
 }
+@media (max-width: 758px) {
+  .donation__inner {
+    align-items: center;
+    gap: 23px;
+  }
+}
 .donation__title {
   max-width: 300px;
 }
+@media (max-width: 758px) {
+  .donation__title {
+    text-align: center;
+    max-width: clamp(214px, 40vw, 300px);
+  }
+}
 .donation__name-bank {
+  font-family: "Georgia-regular";
   font-size: 1.5rem;
   line-height: 1.65rem;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.06em;
   color: #545454;
+}
+@media (max-width: 758px) {
+  .donation__name-bank {
+    letter-spacing: 0;
+  }
 }
 .donation__number {
   max-width: 349px;
@@ -1164,9 +1193,20 @@ p {
   left: 15px;
   top: 9px;
 }
+@media (max-width: 758px) {
+  .donation__number::before {
+    left: 14px;
+    top: 13px;
+  }
+}
 @media (hover: hover) {
   .donation__number:hover {
     background-color: #FDDCC4;
+  }
+}
+@media (max-width: 758px) {
+  .donation__number {
+    padding: 18px 14px 11px 60px;
   }
 }
 .donation__number-link {
@@ -1179,4 +1219,10 @@ p {
   font-weight: 400;
   font-style: italic;
   color: #B2B2B2;
+}
+@media (max-width: 758px) {
+  .donation__legal-info {
+    padding: 0 10px;
+    text-align: justify;
+  }
 }/*# sourceMappingURL=style.css.map */

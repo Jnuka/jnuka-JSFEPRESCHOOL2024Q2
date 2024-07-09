@@ -6,6 +6,10 @@
     @media (max-width: ($desktop-width - 20px)) {
       padding-bottom: 100px;
     }
+    @media (max-width: ($table-width - 10px)) {
+      padding-top: 42px;
+      padding-bottom: 42px;
+    }
   }
   &__content {
     display: flex;
@@ -21,6 +25,9 @@
     @media (max-width: ($desktop-width - 190px)) {
       order: 2;
     }
+    @media (max-width: ($table-width - 10px)) {
+      width: clamp(260px, 67vw, 505px);
+    }
   }
   &__inner {
     display: flex;
@@ -32,14 +39,26 @@
       max-width: clamp(380px, 49vw, 800px);
       order: 1;
     }
+    @media (max-width: ($table-width - 10px)) {
+      align-items: center;
+      gap: 23px;
+    }
   }
   &__title {
     max-width: 300px;
+    @media (max-width: ($table-width - 10px)) {
+      text-align: center;
+      max-width: clamp(214px, 40vw, 300px);
+    }
   }
   &__name-bank {
+    font-family: "Georgia-regular";
     @include font($size: 1.5rem, $height: 1.65rem);
     letter-spacing: 0.06em;
     color: $color-title;
+    @media (max-width: ($table-width - 10px)) {
+      letter-spacing: 0;
+    }
   }
   &__number {
     max-width: 349px;
@@ -59,11 +78,18 @@
       background-repeat: no-repeat;
       left: 15px;
       top: 9px;
+      @media (max-width: ($table-width - 10px)) {
+        left: 14px;
+        top: 13px;
+      }
     }
     @media (hover:hover) {
       &:hover {
         background-color: $color-primary-light;
       }
+    }
+    @media (max-width: ($table-width - 10px)) {
+      padding: 18px 14px 11px 60px;
     }
     &-link {
       color: $color-title;
@@ -73,5 +99,9 @@
   &__legal-info {
     @include font($size: 1.2rem, $height: 1.8rem, $style: italic);
     color: $color-legal;  
+    @media (max-width: ($table-width - 10px)) {
+      padding: 0 10px;
+      text-align: justify;
+    }
   }
 }
