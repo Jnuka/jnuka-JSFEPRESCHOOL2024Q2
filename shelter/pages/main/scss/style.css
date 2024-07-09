@@ -488,6 +488,7 @@ p {
     height: 22px;
     flex-direction: column;
     gap: 8px;
+    cursor: pointer;
   }
 }
 .header__burger-line {
