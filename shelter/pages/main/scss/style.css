@@ -878,12 +878,29 @@ p {
   align-items: center;
   gap: 30px;
 }
+@media (max-width: 1090px) {
+  .donation__content {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+@media (max-width: 1090px) {
+  .donation__img {
+    order: 2;
+  }
+}
 .donation__inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
   max-width: 380px;
+}
+@media (max-width: 1090px) {
+  .donation__inner {
+    max-width: clamp(380px, 49vw, 800px);
+    order: 1;
+  }
 }
 .donation__title {
   max-width: 300px;
