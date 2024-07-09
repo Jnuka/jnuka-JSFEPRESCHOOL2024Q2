@@ -906,6 +906,11 @@ p {
   padding-top: 80px;
   padding-bottom: 99px;
 }
+@media (max-width: 1260px) {
+  .donation__wrapper {
+    padding-bottom: 100px;
+  }
+}
 .donation__content {
   display: flex;
   justify-content: center;

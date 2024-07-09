@@ -3,6 +3,9 @@
   &__wrapper {
     padding-top: 80px;
     padding-bottom: 99px;
+    @media (max-width: ($desktop-width - 20px)) {
+      padding-bottom: 100px;
+    }
   }
   &__content {
     display: flex;
