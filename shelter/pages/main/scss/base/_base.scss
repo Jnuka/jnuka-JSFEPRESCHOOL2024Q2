@@ -46,6 +46,9 @@ h3 {
   color: $color-title;
   letter-spacing: 0.06em;
   margin: 0;
+  @media (max-width: ($table-width - 10px)) {
+    @include font($size: clamp(2.5rem, 3vw + 1rem, 3.5rem), $height: clamp(3.2rem, 4vw + 1rem, 4.5rem));
+  }
 }
 
 h4 {
