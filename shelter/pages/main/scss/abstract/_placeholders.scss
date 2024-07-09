@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Arial-regular';
+  src: url('../../../assets/fonts/arial/arial-regular.woff2') format('woff2'),
+    url('../../../assets/fonts/arial/arial-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Arial-italic';
+  src: url('../../../assets/fonts/arial/arial-italic.woff2') format('woff2'),
+    url('../../../assets/fonts/arial/arial-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Georgia-regular';
+  src: url('../../../assets/fonts/georgia/georgia-regular.woff2') format('woff2'),
+  url('../../../assets/fonts/georgia/georgia-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Georgia-bold';
+  src: url('../../../assets/fonts/georgia/georgia-bold.woff2') format('woff2'),
+  url('../../../assets/fonts/georgia/georgia-bold.woff') format('woff');
+}
+
+%transition {
+  transition: all .3s ease-out;
+}

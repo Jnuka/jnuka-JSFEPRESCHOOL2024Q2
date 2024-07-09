@@ -1,0 +1,28 @@
+.header {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 27px;
+    padding-bottom: 15px;
+  }
+  &__logo {
+    &-link {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+}
+
+.logo {
+  margin-top: 3px;
+  &__subtitle {
+    @include font($size: 1.3rem, $height: 1.495rem);
+    letter-spacing: 0.1em;
+    color: $color-light;
+    margin-left: 3px;
+  }
+}

@@ -1,0 +1,109 @@
+.friends {
+  background-color: $color-bg-gray;
+  &__wrapper {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  &__pagination {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: $color-title-active;
+  border-radius: 9px;
+  padding-bottom: 30px;
+  cursor: pointer;
+  @extend %transition;
+  @media (hover:hover) {
+    &:hover{
+      background-color: $color-light;
+      box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+      .card__button {
+        border: 2px solid $color-primary-light;
+        background-color: $color-primary-light;
+      }
+    }
+  }
+  &__name {
+    line-height: 2.27rem;
+  }
+  &__button {
+    @include font($size: 1.7rem, $height: 2.21rem);
+    letter-spacing: 0.06em;
+    background-color: transparent;
+    color: $color-text-button;
+    padding: 13px 43px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    cursor: pointer;
+    @extend %transition;
+  }
+}
+
+.pagination {
+  &__button {
+    color: $color-text-button;
+    @include font ($size: 2.0rem, $height: 2.3rem);
+    letter-spacing: 0.06em;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: transparent;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    @extend %transition;
+    cursor: pointer;
+    @media (hover:hover) {
+      &:hover {
+        border: 2px solid $color-primary-light;
+        background-color: $color-primary-light;
+      }
+    }
+    &-inactive {
+      border: 2px solid $color-text-dark;
+      color: $color-text-dark;
+      cursor: default;
+      @media (hover:hover) {
+        &:hover {
+          border: 2px solid $color-text-dark;
+          background-color: transparent;
+        }
+      }
+    }
+    &-active {
+      background-color: $color-primary;
+      cursor: default;
+      @media (hover:hover) {
+        &:hover {
+          border: 2px solid $color-primary;
+          background-color: $color-primary;
+        }
+      }
+    }
+  }
+}
