@@ -20,6 +20,9 @@
       flex-direction: column;
       gap: 60px;
     }
+    @media (max-width: ($table-width - 10px)) {
+      gap: 41px;
+    }
   }
   &__img {
     @media (max-width: ($desktop-width - 190px)) {
