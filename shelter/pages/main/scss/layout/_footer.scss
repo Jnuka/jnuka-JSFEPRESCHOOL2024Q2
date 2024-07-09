@@ -5,6 +5,9 @@
     @media (max-width: ($desktop-width - 20px)) {
       padding-top: 30px;
     }
+    @media (max-width: ($table-width - 10px)) {
+      padding-top: 28px;
+    }
   }
   &__content {
     display: grid;
@@ -15,6 +18,14 @@
       gap: 69px 37px;
       padding: 0px 34px;
     }
+    @media (max-width: ($table-width - 10px)) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 43px;
+      padding: 0;
+    }
   }
   &__questions {
     display: flex;
@@ -24,12 +35,20 @@
     @media (max-width: ($desktop-width - 20px)) {
       padding-top: 1px;
     }
+    @media (max-width: ($table-width - 10px)) {
+      align-items: center;
+      gap: 45px;
+    }
   }
   &__title {
     color: $color-light;
     padding-top: 2px;
     @media (max-width: ($desktop-width - 20px)) {
       padding-top: 0;
+    }
+    @media (max-width: ($table-width - 10px)) {
+      text-align: center;
+      padding: 0 10px;
     }
   }
   &__link {
@@ -39,6 +58,10 @@
     text-decoration: none;
     padding-left: 42px;
     position: relative;
+    @media (max-width: ($table-width - 10px)) {
+      @include font($size: 2.0rem, $height: 2.3rem);
+      letter-spacing: 0.06em;
+    }
     &-email {
       padding-left: 60px;
       &::before {
@@ -64,6 +87,12 @@
         height: 32px;
         left: 0;
         top: 1px;
+        @media (max-width: ($table-width - 10px)) {
+          top: -1px;
+        }
+      }
+      @media (max-width: ($table-width - 10px)) {
+        padding-top: 4px;
       }
     }
     &-location {
@@ -76,6 +105,10 @@
         height: 32px;
         left: -1px;
         bottom: 8px;
+        @media (max-width: ($table-width - 10px)) {
+          left: 0px;
+          bottom: 7px;
+        }
       }      
     }
     &-london {      
@@ -97,11 +130,20 @@
       max-width: clamp(302px, 40vw, 500px);
       padding-top: 1px;
     }
+    @media (max-width: ($table-width - 10px)) {
+      gap: 40px;
+      max-width: 100%;
+    }
   }
   &__img {
     @media (max-width: ($desktop-width - 20px)) {
       margin: 0 auto;
       grid-column: 1 / 3;
+    }
+    @media (max-width: ($table-width - 10px)) {
+      width: clamp(260px, 44vw, 300px);
+      margin: 0;
+      padding-top: 1px;
     }
   }
 }
