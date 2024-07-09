@@ -616,11 +616,22 @@ p {
   padding-top: 80px;
   padding-bottom: 100px;
 }
+@media (max-width: 1279px) {
+  .friends__wrapper {
+    padding-top: 82px;
+    padding-bottom: 76px;
+  }
+}
 .friends__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 45px;
+}
+@media (max-width: 1279px) {
+  .friends__content {
+    gap: 28px;
+  }
 }
 .friends__title {
   text-align: center;
@@ -631,6 +642,13 @@ p {
   gap: 30px 40px;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+@media (max-width: 1279px) {
+  .friends__cards {
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 13px;
+  }
 }
 .friends__pagination {
   display: flex;
@@ -655,6 +673,11 @@ p {
   .card:hover .card__button {
     border: 2px solid #FDDCC4;
     background-color: #FDDCC4;
+  }
+}
+@media (max-width: 1279px) {
+  .card:last-child, .card:nth-child(7) {
+    display: none;
   }
 }
 .card__name {

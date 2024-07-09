@@ -3,12 +3,19 @@
   &__wrapper {
     padding-top: 80px;
     padding-bottom: 100px;
+    @media (max-width: ($desktop-width - 1px)) {
+      padding-top: 82px;
+      padding-bottom: 76px;
+    }
   }
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 45px;
+    @media (max-width: ($desktop-width - 1px)) {
+      gap: 28px;
+    }
   }
   &__title {
     text-align: center;
@@ -19,6 +26,11 @@
     gap: 30px 40px;
     padding-top: 15px;
     padding-bottom: 15px;
+    @media (max-width: ($desktop-width - 1px)) {
+      justify-content: center;
+      padding-top: 0;
+      padding-bottom: 13px;
+    }
   }
   &__pagination {
     display: flex;
@@ -44,6 +56,12 @@
         border: 2px solid $color-primary-light;
         background-color: $color-primary-light;
       }
+    }
+  }
+  @media (max-width: ($desktop-width - 1px)) {
+    &:last-child,
+    &:nth-child(7) {
+      display: none;
     }
   }
   &__name {
