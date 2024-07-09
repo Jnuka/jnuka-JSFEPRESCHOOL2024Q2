@@ -2,21 +2,35 @@
   background: url(./../../../assets/icons/noise_transparent@2x.png) repeat, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   &__wrapper {
     padding-top: 40px;
+    @media (max-width: ($desktop-width - 20px)) {
+      padding-top: 30px;
+    }
   }
   &__content {
     display: grid;
     grid-template-columns: 280px 302px 300px;
     gap: 159px;
+    @media (max-width: ($desktop-width - 20px)) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 69px 37px;
+      padding: 0px 34px;
+    }
   }
   &__questions {
     display: flex;
     flex-direction: column;
     gap: 43px;
     padding-top: 15px;
+    @media (max-width: ($desktop-width - 20px)) {
+      padding-top: 1px;
+    }
   }
   &__title {
     color: $color-light;
     padding-top: 2px;
+    @media (max-width: ($desktop-width - 20px)) {
+      padding-top: 0;
+    }
   }
   &__link {
     display: flex;
@@ -78,6 +92,16 @@
     padding-top: 15px;
     .footer__link {
       padding-left: 41px;
+    }
+    @media (max-width: ($desktop-width - 20px)) {
+      max-width: clamp(302px, 40vw, 500px);
+      padding-top: 1px;
+    }
+  }
+  &__img {
+    @media (max-width: ($desktop-width - 20px)) {
+      margin: 0 auto;
+      grid-column: 1 / 3;
     }
   }
 }
