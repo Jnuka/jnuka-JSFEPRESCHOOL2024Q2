@@ -7,6 +7,16 @@
     display: flex;
     justify-content: center;
     gap: 120px;
+    @media (max-width: ($desktop-width - 150px)) {
+      flex-direction: column;
+      align-items: center;
+      gap: 79px;
+    }
+  }
+  &__img {
+    @media (max-width: ($desktop-width - 150px)) {
+      order: 2;
+    }
   }
   &__inner {
     display: flex;
@@ -14,6 +24,11 @@
     justify-content: center;
     gap: 24px;
     max-width: 430px;
+    @media (max-width: ($desktop-width - 150px)) {
+      max-width: clamp(430px, 54vw, 600px);
+      gap: 25px;
+      order: 1;
+    }
   }
   &__title {
     max-width: 350px;

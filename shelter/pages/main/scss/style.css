@@ -667,12 +667,31 @@ p {
   justify-content: center;
   gap: 120px;
 }
+@media (max-width: 1130px) {
+  .about__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 79px;
+  }
+}
+@media (max-width: 1130px) {
+  .about__img {
+    order: 2;
+  }
+}
 .about__inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 24px;
   max-width: 430px;
+}
+@media (max-width: 1130px) {
+  .about__inner {
+    max-width: clamp(430px, 54vw, 600px);
+    gap: 25px;
+    order: 1;
+  }
 }
 .about__title {
   max-width: 350px;
