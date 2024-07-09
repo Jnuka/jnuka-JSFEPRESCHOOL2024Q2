@@ -35,6 +35,10 @@ h1 {
 h2 {
   @include font($size: 4.4rem, $height: 5.72rem);
   margin: 0;
+  @media (max-width: ($table-width - 10px)) {
+    @include font($size: clamp(2.5rem, 5vw + 0.5rem, 4.4rem), $height: clamp(3.2rem, 5vw + 1.5rem, 5.7rem));
+    letter-spacing: 0.06em;
+  }
 }
 
 h3 {
