@@ -841,11 +841,28 @@ p {
   flex-wrap: wrap;
   gap: 55px 120px;
 }
+@media (max-width: 1090px) {
+  .help__cards {
+    gap: 55px 65px;
+  }
+}
+@media (max-width: 870px) {
+  .help__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px 65px;
+  }
+}
 .help__card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+}
+@media (max-width: 870px) {
+  .help__name {
+    text-align: center;
+  }
 }
 
 .donation {
