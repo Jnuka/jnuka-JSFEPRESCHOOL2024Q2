@@ -7,6 +7,10 @@
       padding-top: 82px;
       padding-bottom: 76px;
     }
+    @media (max-width: ($table-width - 10px)) {
+      padding-top: 43px;
+      padding-bottom: 43px;
+    }
   }
   &__content {
     display: flex;
@@ -15,6 +19,9 @@
     gap: 45px;
     @media (max-width: ($desktop-width - 1px)) {
       gap: 28px;
+    }
+    @media (max-width: ($table-width - 10px)) {
+      gap: 42px;
     }
   }
   &__title {
@@ -31,10 +38,16 @@
       padding-top: 0;
       padding-bottom: 13px;
     }
+    @media (max-width: ($table-width - 10px)) {
+      padding-bottom: 0;
+    }
   }
   &__pagination {
     display: flex;
     gap: 20px;
+    @media (max-width: ($table-width - 10px)) {
+      gap: 10px;
+    }
   }
 }
 
@@ -61,6 +74,13 @@
   @media (max-width: ($desktop-width - 1px)) {
     &:last-child,
     &:nth-child(7) {
+      display: none;
+    }
+  }
+  @media (max-width: ($table-width - 10px)) {
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
       display: none;
     }
   }
