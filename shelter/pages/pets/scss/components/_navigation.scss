@@ -16,7 +16,7 @@
       }
     }
   }
-  @media (max-width: ($table-width - 10px)) {
+  @media (max-width: ($table-width - 1px)) {
     display: none;
   }
 }

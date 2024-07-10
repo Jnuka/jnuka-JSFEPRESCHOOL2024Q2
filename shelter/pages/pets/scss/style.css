@@ -449,7 +449,7 @@ p {
   padding-top: 28px;
   padding-bottom: 28px;
 }
-@media (max-width: 758px) {
+@media (max-width: 767px) {
   .header__wrapper {
     margin-right: 10px;
     margin-left: 10px;
@@ -465,7 +465,7 @@ p {
 .header__burger {
   display: none;
 }
-@media (max-width: 758px) {
+@media (max-width: 767px) {
   .header__burger {
     display: flex;
     width: 30px;
@@ -692,7 +692,7 @@ p {
     color: #292929;
   }
 }
-@media (max-width: 758px) {
+@media (max-width: 767px) {
   .navigation {
     display: none;
   }

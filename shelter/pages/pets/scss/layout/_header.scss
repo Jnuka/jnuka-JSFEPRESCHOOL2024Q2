@@ -6,7 +6,7 @@
     align-items: center;
     padding-top: 28px;
     padding-bottom: 28px;
-    @media (max-width: ($table-width - 10px)) {
+    @media (max-width: ($table-width - 1px)) {
       margin-right: 10px;
       margin-left: 10px;
     }
@@ -22,7 +22,7 @@
   }
   &__burger {
     display: none;
-    @media (max-width: ($table-width - 10px)) {
+    @media (max-width: ($table-width - 1px)) {
       display: flex;
       width: 30px;
       height: 22px;
