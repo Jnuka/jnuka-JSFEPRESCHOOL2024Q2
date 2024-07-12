@@ -671,11 +671,10 @@ p {
 }
 .pagination__button-active {
   background-color: #F1CDB3;
-  cursor: default;
 }
 @media (hover: hover) {
   .pagination__button-active:hover {
-    border: 2px solid #F1CDB3;
-    background-color: #F1CDB3;
+    border: 2px solid #FDDCC4;
+    background-color: #FDDCC4;
   }
 }/*# sourceMappingURL=style.css.map */
