@@ -97,11 +97,10 @@
     }
     &-active {
       background-color: $color-primary;
-      cursor: default;
       @media (hover:hover) {
         &:hover {
-          border: 2px solid $color-primary;
-          background-color: $color-primary;
+          border: 2px solid $color-primary-light;
+          background-color: $color-primary-light;
         }
       }
     }
