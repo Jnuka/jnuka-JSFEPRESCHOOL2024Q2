@@ -9,11 +9,25 @@
   &__link {
     text-decoration: none;
     color: $color-title;
+    position: relative;
     @extend %transition;
     @media (hover:hover) {
       &:hover {
         color: $color-text-button;
       }
+    }
+    &:active{
+      &:hover {
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: $color-primary;
+          bottom: -6px;
+          left: 0;      
+        }
+      }      
     }
   }
 }
@@ -28,7 +42,6 @@
     background-color: $color-primary;
     bottom: -2px;
     left: 0;
-
   }
   .navigation__link {
     color: $color-text-button;
