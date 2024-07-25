@@ -546,11 +546,21 @@ p {
 .navigation__link {
   text-decoration: none;
   color: #545454;
+  position: relative;
 }
 @media (hover: hover) {
   .navigation__link:hover {
     color: #292929;
   }
+}
+.navigation__link:active:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #F1CDB3;
+  bottom: -6px;
+  left: 0;
 }
 
 .-active {
@@ -661,7 +671,7 @@ p {
 .pagination__button-inactive {
   border: 2px solid #CDCDCD;
   color: #CDCDCD;
-  cursor: default;
+  cursor: not-allowed;
 }
 @media (hover: hover) {
   .pagination__button-inactive:hover {
@@ -671,10 +681,11 @@ p {
 }
 .pagination__button-active {
   background-color: #F1CDB3;
+  cursor: default;
 }
 @media (hover: hover) {
   .pagination__button-active:hover {
-    border: 2px solid #FDDCC4;
-    background-color: #FDDCC4;
+    border: 2px solid #F1CDB3;
+    background-color: #F1CDB3;
   }
 }/*# sourceMappingURL=style.css.map */
