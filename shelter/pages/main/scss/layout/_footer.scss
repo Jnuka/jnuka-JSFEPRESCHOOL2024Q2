@@ -58,6 +58,12 @@
     text-decoration: none;
     padding-left: 42px;
     position: relative;
+    @extend %transition;
+    @media (hover:hover) {
+      &:hover {
+        color: $color-primary-light;
+      }
+    }
     @media (max-width: ($table-width - 10px)) {
       @include font($size: 2.0rem, $height: 2.3rem);
       letter-spacing: 0.06em;
