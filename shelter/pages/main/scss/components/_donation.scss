@@ -3,12 +3,34 @@
   &__wrapper {
     padding-top: 80px;
     padding-bottom: 99px;
+    @media (max-width: ($desktop-width - 20px)) {
+      padding-bottom: 100px;
+    }
+    @media (max-width: ($table-width - 10px)) {
+      padding-top: 42px;
+      padding-bottom: 43px;
+    }
   }
   &__content {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
+    @media (max-width: ($desktop-width - 190px)) {
+      flex-direction: column;
+      gap: 60px;
+    }
+    @media (max-width: ($table-width - 10px)) {
+      gap: 41px;
+    }
+  }
+  &__img {
+    @media (max-width: ($desktop-width - 190px)) {
+      order: 2;
+    }
+    @media (max-width: ($table-width - 10px)) {
+      width: clamp(260px, 67vw, 505px);
+    }
   }
   &__inner {
     display: flex;
@@ -16,14 +38,30 @@
     justify-content: space-between;
     gap: 20px;
     max-width: 380px;
+    @media (max-width: ($desktop-width - 190px)) {
+      max-width: clamp(380px, 49vw, 800px);
+      order: 1;
+    }
+    @media (max-width: ($table-width - 10px)) {
+      align-items: center;
+      gap: 24px;
+    }
   }
   &__title {
     max-width: 300px;
+    @media (max-width: ($table-width - 10px)) {
+      text-align: center;
+      max-width: clamp(214px, 40vw, 300px);
+    }
   }
   &__name-bank {
+    font-family: "Georgia-regular";
     @include font($size: 1.5rem, $height: 1.65rem);
     letter-spacing: 0.06em;
     color: $color-title;
+    @media (max-width: ($table-width - 10px)) {
+      letter-spacing: 0;
+    }
   }
   &__number {
     max-width: 349px;
@@ -43,11 +81,18 @@
       background-repeat: no-repeat;
       left: 15px;
       top: 9px;
+      @media (max-width: ($table-width - 10px)) {
+        left: 14px;
+        top: 8px;
+      }
     }
     @media (hover:hover) {
       &:hover {
         background-color: $color-primary-light;
       }
+    }
+    @media (max-width: ($table-width - 10px)) {
+      padding: 13px 14px 11px 60px;
     }
     &-link {
       color: $color-title;
@@ -57,5 +102,9 @@
   &__legal-info {
     @include font($size: 1.2rem, $height: 1.8rem, $style: italic);
     color: $color-legal;  
+    @media (max-width: ($table-width - 10px)) {
+      padding: 0 10px;
+      text-align: justify;
+    }
   }
 }
