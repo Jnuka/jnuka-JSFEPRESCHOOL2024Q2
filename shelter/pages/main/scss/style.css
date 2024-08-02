@@ -1196,7 +1196,7 @@ p {
 @media (max-width: 758px) {
   .donation__wrapper {
     padding-top: 42px;
-    padding-bottom: 42px;
+    padding-bottom: 43px;
   }
 }
 .donation__content {
@@ -1242,7 +1242,7 @@ p {
 @media (max-width: 758px) {
   .donation__inner {
     align-items: center;
-    gap: 23px;
+    gap: 24px;
   }
 }
 .donation__title {
@@ -1290,7 +1290,7 @@ p {
 @media (max-width: 758px) {
   .donation__number::before {
     left: 14px;
-    top: 13px;
+    top: 8px;
   }
 }
 @media (hover: hover) {
@@ -1300,7 +1300,7 @@ p {
 }
 @media (max-width: 758px) {
   .donation__number {
-    padding: 18px 14px 11px 60px;
+    padding: 13px 14px 11px 60px;
   }
 }
 .donation__number-link {

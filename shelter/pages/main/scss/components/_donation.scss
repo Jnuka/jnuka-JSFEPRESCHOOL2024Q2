@@ -8,7 +8,7 @@
     }
     @media (max-width: ($table-width - 10px)) {
       padding-top: 42px;
-      padding-bottom: 42px;
+      padding-bottom: 43px;
     }
   }
   &__content {
@@ -44,7 +44,7 @@
     }
     @media (max-width: ($table-width - 10px)) {
       align-items: center;
-      gap: 23px;
+      gap: 24px;
     }
   }
   &__title {
@@ -83,7 +83,7 @@
       top: 9px;
       @media (max-width: ($table-width - 10px)) {
         left: 14px;
-        top: 13px;
+        top: 8px;
       }
     }
     @media (hover:hover) {
@@ -92,7 +92,7 @@
       }
     }
     @media (max-width: ($table-width - 10px)) {
-      padding: 18px 14px 11px 60px;
+      padding: 13px 14px 11px 60px;
     }
     &-link {
       color: $color-title;
