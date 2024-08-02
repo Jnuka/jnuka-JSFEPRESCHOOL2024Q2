@@ -35,6 +35,10 @@ h1 {
 h2 {
   @include font($size: 4.4rem, $height: 5.72rem);
   margin: 0;
+  @media (max-width: ($table-width - 10px)) {
+    @include font($size: clamp(2.5rem, 5vw + 0.5rem, 4.4rem), $height: clamp(3.2rem, 5vw + 1.5rem, 5.7rem));
+    letter-spacing: 0.06em;
+  }
 }
 
 h3 {
@@ -42,6 +46,9 @@ h3 {
   color: $color-title;
   letter-spacing: 0.06em;
   margin: 0;
+  @media (max-width: ($table-width - 10px)) {
+    @include font($size: clamp(2.5rem, 3vw + 1rem, 3.5rem), $height: clamp(3.2rem, 4vw + 1rem, 4.5rem));
+  }
 }
 
 h4 {
@@ -49,6 +56,9 @@ h4 {
   color: $color-title;
   letter-spacing: 0.06em;
   margin: 0;
+  @media (max-width: ($table-width - 10px)) {
+    @include font($size: clamp(1.5rem, 2.5vw + 0.3rem, 2rem), $height: clamp(1.6rem, 2.6vw + 0.3rem, 2.3rem));
+  }
 }
 
 p {

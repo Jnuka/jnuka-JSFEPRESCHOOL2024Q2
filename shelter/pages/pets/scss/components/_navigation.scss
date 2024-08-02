@@ -16,7 +16,7 @@
         color: $color-text-button;
       }
     }
-    &:active{
+    &:active {
       &:hover {
         &::after {
           content: '';
@@ -29,6 +29,9 @@
         }
       }      
     }
+  }
+  @media (max-width: ($table-width - 1px)) {
+    display: none;
   }
 }
 
