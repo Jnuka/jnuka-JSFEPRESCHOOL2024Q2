@@ -25,7 +25,7 @@
       order: 2;
     }
     @media (max-width: ($table-width - 10px)) {
-      width: clamp(260px, 2vw, 300px);
+      width: clamp(260px, 41vw, 300px);
     }
   }
   &__inner {

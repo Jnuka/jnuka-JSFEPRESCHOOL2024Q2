@@ -894,7 +894,7 @@ p {
 }
 @media (max-width: 758px) {
   .about__img {
-    width: clamp(260px, 2vw, 300px);
+    width: clamp(260px, 41vw, 300px);
   }
 }
 .about__inner {
