@@ -7,10 +7,14 @@ const imgBg = document.querySelector('.background-img');
 const playerImg = document.querySelector('.player__img');
 const playerTitle = document.querySelector('.player__title');
 const turnOff = document.querySelector(".sound-value");
+const durationMusicEnd = document.querySelector('.player__end-time-music');
+const durationMusicCurrent = document.querySelector('.player__start-music');
+const progressBar = document.querySelector('.player__progress-bar-active');
 
 let iterator = 0;
 let flag = false;
 let audioValueSound = true; 
+let currentMusicTime = 0; 
 
 export const musicJson = [
   {
@@ -466,10 +470,8 @@ buttons.addEventListener("click", (event) => {
   }
 })
 
-let currentMusicTime = 0; 
-
 function convertTimeMusic(duration) {
-  let min = Math.floor(audio.duration / 60);
+  let min = Math.floor(duration / 60);
   let sec = Math.trunc(duration - (min * 60));
   if (sec < 10) {
     return `${min}:0${sec}`;
@@ -477,6 +479,19 @@ function convertTimeMusic(duration) {
     return `${min}:${sec}`;
   }
 }
+
+function durationMusic() {
+  audio.onloadeddata = function(e) {
+    durationMusicEnd.innerHTML = convertTimeMusic(audio.duration);
+  }
+  durationMusicCurrent.innerHTML = convertTimeMusic(currentMusicTime);
+  progressBar.style.width = `${Math.trunc((currentMusicTime * 100) / audio.duration)}%`;
+}
+
+setInterval( function() {
+  durationMusic();
+  currentMusicTime = audio.currentTime;
+}, 1000); 
 
 function playMusic() {
   audio.src = musicJson[iterator].src;
