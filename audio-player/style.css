@@ -383,6 +383,28 @@ template {
   font-family: "Billabong";
   font-weight: 400;
 }
+.player__time-bar {
+  font-family: "Billabong";
+  display: grid;
+  align-items: center;
+  grid-template-columns: 28px 225px 28px;
+  gap: 10px;
+  color: white;
+}
+.player__progress-bar {
+  width: 100%;
+  height: 4px;
+  position: relative;
+  background-color: white;
+  border: 1px solid #232c1c;
+  border-radius: 20px;
+}
+.player__progress-bar-active {
+  width: 20px;
+  height: 4px;
+  background-color: #232c1c;
+  z-index: 1;
+}
 
 .conrols {
   display: flex;
