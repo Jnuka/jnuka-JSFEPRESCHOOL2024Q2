@@ -1,0 +1,354 @@
+@import "_normalize.scss";
+
+$color-yellow: #faed26;
+$color-back: #46344e;
+$color-gray: #5a5560;
+$color-bg:#9d8d8f;
+$color-bap: #9b786f;
+
+%transition {
+  transition: all .3s ease-out;
+}
+
+.body__no-scroll {
+  overflow: hidden;
+}
+
+
+body.light-theme {
+  .header {
+    background-color: #e9cabe;
+    &__title {
+      color: #4a5fc1;
+    }
+    &__btn-search {
+      background-image: url("./assets//svg/search-light.svg");
+    }
+    &__cross-for-input {
+      color: #4A5FC1;
+    }
+    &__search {
+      color: black;
+      border-bottom:1px solid $color-bg; 
+      &:focus{ 
+        border-bottom:1px solid #4A5FC1;	
+      }
+    }
+  }
+  .main {
+    background-color: #bdbfc7;
+  }
+  .footer {
+    background-color: #e9cabe;
+    &__copyright {
+      color: #4A5FC1;
+    }
+    &__rsschool {
+      
+    }
+  }
+  .button-for-more-img {
+    color: #4A5FC1;
+    border: 1px solid #4A5FC1;
+    @media (hover:hover) {
+      &:hover {
+        border: 1px solid #e9cbbf;
+        color: #e9cbbf;
+      }
+    }
+  }
+  .modal__close-button {
+    border: 2px solid #4A5FC1;
+    svg {
+      path {
+        fill: #4A5FC1;
+      }
+    }
+    @media (hover:hover) {
+      &:hover {
+        background-color: #4A5FC1;
+        svg {
+          path {
+            fill: black;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+@keyframes modal-active {  
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}  
+}
+
+@font-face {
+  font-family: 'Revard';
+  src: url('./assets/fonts/Revard.woff2') format('woff2'),
+      url('./assets/fonts/Revard.woff') format('woff');
+}
+
+body {
+  font-family: 'Revard';
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: $color-back;
+  padding: 10px 0;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn-switch {
+    background-image: url('./assets/img/light-mode.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  &__logo {
+    width: 50px;
+    height: 50px;
+  }
+  &__title-link {
+    text-decoration: none;
+  }
+  &__title {
+    margin: 0;
+    color: $color-yellow;
+  }
+  &__search-inner {
+    display: flex;
+    align-items: center;
+  }
+  &__cross-for-input {
+    color: #faed26;
+    background-color: transparent;
+    border: none;
+    opacity: 0;
+    cursor: pointer;
+    padding: 0;
+  }
+  &__cross-for-input-active {
+    opacity: 1;
+  }
+  &__search {
+    color:#fff;
+    border:0;
+    border-bottom:1px solid $color-gray;  
+    background:transparent;
+    padding:5px;
+    @extend %transition;
+    &:focus{ 
+      border:none;	
+      outline:none;
+      border-bottom:1px solid $color-yellow;	
+    }
+  }
+  &__btn-search {
+    width: 20px;
+    height: 20px;
+    background-image: url("./assets//svg/search.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.main {
+  padding: 30px 0;
+  background-color: rgba(#5a5560, 1);
+  // background-color: rgba($color-bg, 0.5);
+  min-height: 732px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery-content {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 420px;
+  height: 280px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-img {
+  width: 420px;
+  height: 280px;
+  z-index: 1;
+  @extend %transition;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.gallery__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__link-img-error {
+    cursor: pointer;
+  }
+  &__img-error {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.button-for-more-img { 
+  width: 100%;
+  color: $color-back;
+  font-size: 28px;
+  border: 1px solid $color-back;
+  background-color: transparent;
+  line-height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  @extend %transition;
+  @media (hover:hover) {
+    &:hover {
+      border: 1px solid $color-yellow;
+      color: $color-yellow;
+    }
+  }
+}
+
+.notification {
+  margin: 0;
+  font-size: 45px;
+  color: $color-back;
+  text-align: center;
+  @extend %transition;
+}
+
+.footer {
+  background-color: $color-back;
+  z-index: 1;
+  &__wrapper {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 150px;
+  }
+  &__copyright {
+    font-size: 18px;
+    color: $color-yellow;
+    @extend %transition;    
+  }
+  &__rsschool {
+    width: 100px;
+    cursor: pointer;
+    @extend %transition;
+    filter: grayscale(100%);
+    @media (hover:hover) {
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+  &__github {
+    width: 45px;
+    filter: grayscale(100%);
+    cursor: pointer;
+    @extend %transition;
+    @media (hover:hover) {
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}
+
+
+.overlay {  
+  position: fixed;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(black, 0.6);
+  z-index: 101;
+  cursor: pointer;
+}
+.modal {
+  position: relative;
+  background: transparent;   
+  animation-name: modal-active;
+  animation-duration: 1s;
+  z-index: 102;
+  cursor: default;
+  &__wrapper {
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);  
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 100%;
+    background: $color-yellow;
+  
+  }
+  &__inner {
+    border-radius: 10px;
+  }
+
+  &__img {
+    width: 800px;
+    border-radius: 20px;
+  }
+
+  &__close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -42px;
+    top: -53px;
+    width: 52px;
+    height: 52px; 
+    border: 2px solid $color-yellow;
+    border-radius: 100px;
+    background-color: transparent;
+    cursor: pointer;
+    @extend %transition;
+    @media (hover:hover) {
+      &:hover {
+        background-color: $color-yellow;
+        svg {
+          path {
+            fill: black;
+          }
+        }
+      }
+    }
+  }
+}
+
