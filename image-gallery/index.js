@@ -15,8 +15,8 @@ let IDImg = 0;
 async function getData(url) {
   try {
     const res = await fetch(url);
-    const data = await res.json();
-    if (res.status === 200) {
+    if (res.status == 200) {
+      const data = await res.json();
       if (data.total == 0) {
         noSearch(`Nothing was found for your search:  ${valueSearch}. <br> Make another request`);
         return;
@@ -34,10 +34,8 @@ async function getData(url) {
         })        
       });
     }
-    else  if (res.status === 403){
-      console.log('many requst', res.status)
+    else  if (res.status == 403){      
       noSearch('403 - Too many request. <br> Try again later.');
-      console.log('403 - Too many request. <br> Try again later.');
     }
     else {
       noSearch('Error! Not found', true);
