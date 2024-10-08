@@ -74,8 +74,9 @@
 .halloween-wrapper {
   background: url(./../assets/img/pngwing.png), #355c7d;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   z-index: -1;
+  width: 305px;
   .modal__close-button {
     filter: invert(100%);
     @extend %transition;
