@@ -106,3 +106,26 @@
     transform: scale(1);
   }
 }
+
+.modal__feedBack-button {
+  border-radius: 5px;
+  width: 128px;
+  height: 25px;
+  background-color: #f67280;
+  border: 1px solid #f67280;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  @extend %transition;
+  transform: scale(1);
+  &:active {
+    transform: scale(0.99);
+  }
+  @media (hover:hover) {
+    &:hover {
+      background-color: #c06c84;
+      border: 1px solid #c06c84;
+    }
+  }
+}

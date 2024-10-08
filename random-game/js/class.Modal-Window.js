@@ -1,3 +1,5 @@
+import { FeedBackModal } from "./class.FeedBackModal.js";
+
 export class ModalWindow {
   constructor(numberOfMoves, time, category) {
     this.numberOfMoves = numberOfMoves;
@@ -7,6 +9,8 @@ export class ModalWindow {
     this.modal = '';
     this.modalWrapper = '';
     this.modalCloseButton = '';   
+    this.modalContent = '';
+    this.modalfeedBackButton = '';
     this.bildModalWindow();
   }
 
@@ -27,7 +31,12 @@ export class ModalWindow {
     this.modalCloseButton.classList.add('modal__close-button');
     this.modalCloseButton.innerHTML = 'x';
     
-    this.setContent();
+    this.modalContent = document.createElement('div');
+    this.modalContent.classList.add('modal__content');
+
+    this.modalfeedBackButton = document.createElement('button');
+    this.modalfeedBackButton.classList.add('modal__feedBack-button');
+    this.modalfeedBackButton.innerHTML = 'Send FeedBack';
 
     this.appendModalElements();
 
@@ -52,6 +61,8 @@ export class ModalWindow {
   appendModalElements() {
     this.containerModalCloseButton.append(this.modalCloseButton);
     this.modalWrapper.append(this.containerModalCloseButton);
+    this.setContent();
+    this.modalWrapper.append(this.modalfeedBackButton);
     this.modal.append(this.modalWrapper);
     this.overlay.append(this.modal);
   }
@@ -59,11 +70,16 @@ export class ModalWindow {
   buildEvents() {
     this.overlay.addEventListener('click', this.closeModal);
     this.modalCloseButton.addEventListener('click', this.closeModal);
+
+    this.modalfeedBackButton.addEventListener('click', () => {
+      this.closeModal;
+      new FeedBackModal(this.category);
+    })
   }
 
   closeModal(e) {
     const overlay = document.querySelector('.overlay');
-    if (e.target.classList.contains('overlay') || e.target.classList.contains('modal__close-button')) {
+    if (e.target.classList.contains('overlay') || e.target.classList.contains('modal__close-button') || e.target.classList.contains('modal__feedBack-button')) {
       if (overlay) {
         overlay.remove();
         document.body.classList.remove('body__no-scroll');
@@ -81,8 +97,7 @@ export class ModalWindow {
   
   generateModalTemplate() {
     let template = '';
-    let modalContent = document.createElement('div');
-    modalContent.classList.add('modal__content');
+    
     let footerLink = '';
     if (this.category == 'southPark') {
       footerLink = 'https://southpark.fandom.com/wiki/South_Park_Archives';
@@ -101,8 +116,8 @@ export class ModalWindow {
     template += `<p class="modal__copyright">The pictures were taken from the `;
     template += `<a class="modal__copyright-link" href="${footerLink}" target="_blank">website</a>`
     template += `</p>`;
-
-    modalContent.innerHTML = template;
-    return modalContent;
+    
+    this.modalContent.innerHTML = template;   
+    return this.modalContent;
   }
 }

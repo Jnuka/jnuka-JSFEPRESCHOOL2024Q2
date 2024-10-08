@@ -315,7 +315,7 @@ template {
   font-style: normal;
   font-display: swap;
 }
-.halloween-wrapper .modal__close-button, .main__turn-on-sound,
+.halloween-modalFeedBack__wrapper .modal__close-button, .halloween-wrapper .modal__close-button, .modal__feedBack-button, .main__turn-on-sound,
 .main__turn-on-music, .main__reset-btn, .main__button-start-game, .main__category, .card, .confirmation-box__noBtn, .confirmation-box__yesBtn, .history__close-button, .history, .main__button-history, .modal__close-button, .modal__copyright-link, .modal, .footer__github, .footer__rsschool, .footer__copyright {
   transition: all 0.3s ease-out;
 }
@@ -352,6 +352,7 @@ body {
 .footer {
   background-color: #355c7d;
   z-index: 1;
+  height: 70px;
 }
 .footer__wrapper {
   padding-top: 6px;
@@ -411,7 +412,7 @@ body {
 
 .modal__wrapper {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-size: contain;
@@ -419,7 +420,7 @@ body {
   background-color: #355c7d;
   box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
   width: 265px;
-  height: 370px;
+  height: 410px;
   border-radius: 10px;
   padding: 20px;
   cursor: default;
@@ -737,7 +738,7 @@ body {
   background-color: #355c7d;
   font-size: 25px;
   background-size: cover;
-  min-height: 847px;
+  min-height: calc(100vh - 70px - 20px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -948,6 +949,28 @@ body {
   transform: scale(1);
 }
 
+.modal__feedBack-button {
+  border-radius: 5px;
+  width: 128px;
+  height: 25px;
+  background-color: #f67280;
+  border: 1px solid #f67280;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transform: scale(1);
+}
+.modal__feedBack-button:active {
+  transform: scale(0.99);
+}
+@media (hover: hover) {
+  .modal__feedBack-button:hover {
+    background-color: #c06c84;
+    border: 1px solid #c06c84;
+  }
+}
+
 .simpsons {
   background-image: url("./../assets/img/fon-simpsons.jpg");
 }
@@ -1022,7 +1045,7 @@ body {
 }
 
 .halloween-wrapper {
-  background: url(./../assets/img/pngwing.png), Linear-gradient(rgb(73, 212, 254), rgb(13, 101, 237));
+  background: url(./../assets/img/pngwing.png), #355c7d;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -1106,4 +1129,32 @@ body {
 
 .halloween-confirmation-box-wrapper {
   background-color: rgb(36, 35, 35);
+}
+
+.modalFeedBack__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #355c7d;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: default;
+}
+
+.halloween-modalFeedBack__wrapper {
+  background: url(./../assets/img/pngwing.png), #355c7d;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.halloween-modalFeedBack__wrapper .modal__close-button {
+  filter: invert(100%);
+  transition: all 0.2s;
+}
+@media (hover: hover) {
+  .halloween-modalFeedBack__wrapper .modal__close-button:hover {
+    filter: invert(49%) sepia(96%) saturate(3592%) hue-rotate(358deg) brightness(97%) contrast(111%);
+  }
 }/*# sourceMappingURL=style.css.map */

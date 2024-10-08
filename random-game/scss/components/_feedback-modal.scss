@@ -1,0 +1,28 @@
+.modalFeedBack__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #355c7d;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: default;
+}
+
+.halloween-modalFeedBack__wrapper {
+  background: url(./../assets/img/pngwing.png), #355c7d;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .modal__close-button {
+    filter: invert(100%);
+    @extend %transition;
+    transition: all 0.2s ;
+    @media (hover:hover) {
+      &:hover {
+        filter: invert(49%) sepia(96%) saturate(3592%) hue-rotate(358deg) brightness(97%) contrast(111%);
+      }
+    }
+  }
+}

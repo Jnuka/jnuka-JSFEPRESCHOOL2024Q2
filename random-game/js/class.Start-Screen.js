@@ -181,8 +181,6 @@ export class StartScreen {
       cards.classList.add('cards');
       contentGame.append(cards);
       if (cards.innerHTML == '') {
-        console.log('countCard[iterator]', countCard[iterator])
-        console.log('this.categoryName', this.categoryName)
         gameStart = new Game(countCard[iterator], this.categoryName);
         this.titleGame.remove();
         this.mainStart.style.height = '500px';

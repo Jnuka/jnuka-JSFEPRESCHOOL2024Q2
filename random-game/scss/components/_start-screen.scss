@@ -4,7 +4,7 @@
   background-color: #355c7d;
   font-size: 25px;
   background-size: cover;
-  min-height: 847px;
+  min-height: calc(100vh - 70px - 20px);
   display: flex;
   justify-content: center;
   align-items: center;
