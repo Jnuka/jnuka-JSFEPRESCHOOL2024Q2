@@ -1,0 +1,11 @@
+html {
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: 'Monday Sans';
+}
+
+.body__no-scroll {
+  overflow: hidden;
+}

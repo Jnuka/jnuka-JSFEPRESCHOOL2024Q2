@@ -1,0 +1,41 @@
+.footer {
+  background-color: #355c7d;
+  z-index: 1; 
+  &__wrapper {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  &__copyright {
+    font-size: 18px;
+    color: white;
+    @extend %transition;    
+  }
+  &__rsschool {
+    width: 100px;
+    cursor: pointer;
+    @extend %transition;
+    filter: invert(100%);
+    @media (hover:hover) {
+      &:hover {
+        filter: invert(0%);
+      }
+    }
+  }
+  &__github {
+    width: 45px;
+    filter: invert(100%);
+    cursor: pointer;
+    @extend %transition;
+    @media (hover:hover) {
+      &:hover {
+        filter: invert(0%);
+      }
+    }
+  }
+}

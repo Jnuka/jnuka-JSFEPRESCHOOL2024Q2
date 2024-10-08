@@ -1,0 +1,159 @@
+.simpsons {
+  background-image: url('./../assets/img/fon-simpsons.jpg');
+  .main__start-screen {
+    background: Linear-gradient(rgb(252, 203, 0), rgb(228, 68, 35));
+    background: #355c7d;
+    border: 1px solid white;
+  }
+  .card-container {
+    background-color: rgb(252, 203, 0); 
+  }
+  .image-card {
+    background-color: rgb(198, 161, 104);
+  }
+  .successful {
+    background-color: rgb(92, 158, 217); 
+    .image-card {
+      background-color: transparent;
+    }
+  }
+  .modal__wrapper {
+    background: Linear-gradient(rgb(252, 203, 0), rgb(228, 68, 35));
+  }
+}
+
+.pokemon {
+  background-image: url('./../assets/img/fon-pokemon.jpg');
+  .card-container {
+    background-color: rgb(243, 215, 123); 
+  }
+  .image-card {
+    background-color: rgb(232, 169, 125);
+  }
+  .successful {
+    background-color: rgb(207, 99, 80); 
+    .image-card {
+      background-color: transparent;
+    }
+  }
+}
+
+.southPark {
+  background-image: url('./../assets/img/fon-south-park.jpg');
+  .card-container {
+    background-color: rgb(0, 110, 73); 
+  }
+  .image-card {
+    background-color: rgb(227, 56, 64);
+  }
+  .successful {
+    background-color: rgb(140, 214, 249); 
+    .image-card {
+      background-color: transparent;
+    }
+  }
+}
+
+.halloween {
+  background-image: url('./../assets/img/fon-halloween.jpg');
+  .card-container {
+    background-color: rgb(235, 115, 53);
+    border: 1px solid black;
+  }
+  .image-card {
+    background-color: rgb(148, 70, 32);
+  }
+  .successful {
+    background-color: #c42801; 
+    .image-card {
+      background-color: transparent;
+    }
+  }  
+}
+
+.halloween-wrapper {
+  background: url(./../assets/img/pngwing.png), Linear-gradient(rgb(73, 212, 254), rgb(13, 101, 237));
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  .modal__close-button {
+    filter: invert(100%);
+    @extend %transition;
+    transition: all 0.2s ;
+    @media (hover:hover) {
+      &:hover {
+        filter: invert(49%) sepia(96%) saturate(3592%) hue-rotate(358deg) brightness(97%) contrast(111%);
+      }
+    }
+  }
+}
+
+.halloween__content-buttons {
+  background-color: #ff4a4a;
+}
+
+.category-halloween.active {
+  background-color: #c42801;
+  border: 1px solid #c42801;
+}
+
+.category-halloween {
+  position: relative;
+  background-color: #ff6001;
+  border: 1px solid #ff6001;
+  &::after {
+    content: 'New';
+    display: flex;
+    position: absolute;
+    right: -20px;
+    top: -18px;
+    font-size: 18px;
+    transform: rotate(20deg);
+    background-color: #ff4a4a;
+    box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (hover:hover) {
+    &:hover {
+      background-color: #ff9e01;
+      border: 1px solid #ff9e01;
+    }
+  }
+}
+
+.halloween-reset {
+  background-color: #ff6001;
+  border: 1px solid #ff6001;
+  @media (hover:hover) {
+    &:hover {
+      background-color: #ff9e01;
+      border: 1px solid #ff9e01;
+    }
+  }
+}
+
+.halloween-content-time {
+  background-color: #ff4a4a;
+  border: 1px solid #ff4a4a;
+}
+
+.halloween-yesBtn,
+.halloween-noBtn {
+  background-color: #ff6001;
+  border: 1px solid #ff6001;
+  @media (hover:hover) {
+    &:hover {
+      background-color: #ff9e01;
+      border: 1px solid #ff9e01;
+    }
+  }
+}
+
+.halloween-confirmation-box-wrapper {
+  background-color: rgb(36, 35, 35);
+}

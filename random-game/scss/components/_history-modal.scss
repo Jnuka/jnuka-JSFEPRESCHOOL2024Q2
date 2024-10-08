@@ -1,0 +1,98 @@
+.main__button-history {
+  border-radius: 5px;
+  width: 220px;
+  height: 45px;
+  background-color: #c06c84;
+  border: 1px solid #c06c84;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  cursor: pointer;
+  @extend %transition;
+  @media (hover:hover) {
+    &:hover {
+      background-color: #c07a8e;
+      border: 1px solid #c07a8e;
+    }
+  }
+}
+
+.history {
+  position: relative;
+  background-color: transparent;
+  animation-name: modal-active;
+  animation-duration: 1s;
+  @extend %transition;
+}
+
+.history__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #355c7d;
+  width: 600px;
+  min-height: 650px;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: default;
+}
+
+.history__modal {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.history__container-close-button {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.history__close-button {
+  width: 40px;
+  height: 40px;
+  background-image: url(./../assets/svg/cross.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+  @extend %transition;
+  cursor: pointer;
+  @media (hover:hover) {
+    &:hover {
+      filter: invert(100%);
+    }
+  }
+}
+
+.history__title {
+  font-size: 30px;
+  color: white;
+  margin: 0;
+}
+
+.history__game {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+}
+
+.history__table-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: 1px solid black;
+  margin: 0;
+  background-color: #4f7392;
+}
+
+.history__table-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin: 0;
+  border: 1px solid black;
+}
