@@ -1,0 +1,96 @@
+.overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background-color: transparent;
+  animation-name: modal-active;
+  animation-duration: 1s;
+  @extend %transition;
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #355c7d;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  width: 265px;
+  height: 410px;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: default;
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  color: white;
+  p {
+    margin: 0;
+  }
+}
+
+.modal__title {
+  font-size: 30px;
+}
+
+.modal__img{ 
+  width: 180px;
+}
+
+.modal__copyright {
+  text-align: center;
+  font-size: 15px;
+}
+
+.modal__copyright-link {
+  text-decoration: none;
+  color: #f67280;
+  @extend %transition;
+  @media (hover:hover) {
+    &:hover {
+      color: #c06c84;
+    }
+  }
+}
+
+.modal__container-close-button {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.modal__close-button {
+  width: 30px;
+  height: 30px;
+  background-image: url(./../assets/svg/cross.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+  @extend %transition;
+  cursor: pointer;
+  @media (hover:hover) {
+    &:hover {
+      filter: invert(100%);
+    }
+  }
+}

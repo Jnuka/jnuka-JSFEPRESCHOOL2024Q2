@@ -1,0 +1,21 @@
+.main__content-time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background-color: #355c7d;
+  border: 1px solid #355c7d;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+}
+
+.main__time-title {
+  margin: 0;
+}
+
+.main__time {
+  width: 155px;
+  margin: 0;  
+}

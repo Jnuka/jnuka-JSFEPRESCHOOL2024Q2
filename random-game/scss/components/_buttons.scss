@@ -1,0 +1,131 @@
+.main__button-minus {
+  background-image: url('./../assets/svg/minus.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.main__button-plus {
+  background-image: url('./../assets/svg/plus.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.main__button-start-game {
+  border-radius: 5px;
+  width: 220px;
+  height: 45px;
+  border: none;
+  background-color: #c06c84;
+  border: 1px solid #c06c84;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  cursor: pointer;
+  @extend %transition;
+  @media (hover:hover) {
+    &:hover {
+      background-color: #c07a8e;
+      border: 1px solid #c07a8e;
+    }
+  }
+}
+
+.main__reset-btn {
+  border-radius: 5px;
+  width: 175px;
+  height: 45px;
+  background-color: #f67280;
+  border: 1px solid #f67280;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  @extend %transition;
+  transform: scale(1);
+  &:active {
+    transform: scale(0.99);
+  }
+  @media (hover:hover) {
+    &:hover {
+      background-color: #c06c84;
+      border: 1px solid #c06c84;
+    }
+  }
+}
+
+.main__turn-on-sound,
+.main__turn-on-music {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  background-image: url('./../assets/svg/sound.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  cursor: pointer;
+  transform: scale(1);
+  filter: invert(100%);
+  @extend %transition;
+  &:active {
+    transform: scale(0.99);
+  }  
+}
+
+.off {
+  background-image: url('./../assets/svg/sound-off.svg');
+  filter: invert(0%);
+}
+
+
+.button {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transform: scale(1);
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.active {
+  background-color: #f67280;
+  border: 1px solid #f67280;
+}
+
+.main__category.active {
+  background-color: #f67280;
+  border: 1px solid #f67280;
+}
+
+.inactive {
+  filter: invert(100%);
+  cursor: default;
+  &:active {
+    transform: scale(1);
+  }
+}
+
+.modal__feedBack-button {
+  border-radius: 5px;
+  width: 128px;
+  height: 25px;
+  background-color: #f67280;
+  border: 1px solid #f67280;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  @extend %transition;
+  transform: scale(1);
+  &:active {
+    transform: scale(0.99);
+  }
+  @media (hover:hover) {
+    &:hover {
+      background-color: #c06c84;
+      border: 1px solid #c06c84;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.main__content-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.main__content-buttons {
+  display: grid;
+  grid-template-columns: 40px 110px; 
+  grid-template-rows: 30px 30px; 
+  align-items: center;
+  gap: 5px;
+  background-color: #355c7d;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.main__turn-on-music-text,
+.main__turn-on-sound-text {
+  margin: 0;
+}
