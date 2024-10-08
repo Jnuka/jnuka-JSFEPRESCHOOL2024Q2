@@ -315,7 +315,7 @@ template {
   font-style: normal;
   font-display: swap;
 }
-.halloween-modalFeedBack__wrapper .modal__close-button, .halloween-wrapper .modal__close-button, .modal__feedBack-button, .main__turn-on-sound,
+.form-btn, .halloween-modalFeedBack__wrapper .modal__close-button, .halloween-wrapper .modal__close-button, .modal__feedBack-button, .main__turn-on-sound,
 .main__turn-on-music, .main__reset-btn, .main__button-start-game, .main__category, .card, .confirmation-box__noBtn, .confirmation-box__yesBtn, .history__close-button, .history, .main__button-history, .modal__close-button, .modal__copyright-link, .modal, .footer__github, .footer__rsschool, .footer__copyright {
   transition: all 0.3s ease-out;
 }
@@ -599,6 +599,7 @@ body {
 .confirmation-box__text {
   color: white;
   font-size: 25px;
+  text-align: center;
 }
 
 .confirmation-box__content-btn {
@@ -1047,8 +1048,9 @@ body {
 .halloween-wrapper {
   background: url(./../assets/img/pngwing.png), #355c7d;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   z-index: -1;
+  width: 305px;
 }
 .halloween-wrapper .modal__close-button {
   filter: invert(100%);
@@ -1157,4 +1159,75 @@ body {
   .halloween-modalFeedBack__wrapper .modal__close-button:hover {
     filter: invert(49%) sepia(96%) saturate(3592%) hue-rotate(358deg) brightness(97%) contrast(111%);
   }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+}
+.form-question {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
+}
+.form-input {
+  background-color: transparent;
+  border: 1px solid rgb(51, 51, 51);
+  outline: none;
+  padding: 8px;
+  color: white;
+  border-radius: 5px;
+}
+.form-input:focus {
+  border: 1px solid black;
+}
+.form-textarea {
+  background-color: transparent;
+  border: 1px solid rgb(51, 51, 51);
+  resize: none;
+  outline: none;
+  padding: 8px;
+  color: white;
+  border-radius: 5px;
+}
+.form-textarea:focus {
+  border: 1px solid black;
+}
+.form-btn {
+  border-radius: 5px;
+  width: 100%;
+  height: 45px;
+  background-color: #f67280;
+  border: 1px solid #f67280;
+  box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transform: scale(1);
+}
+.form-btn:active {
+  transform: scale(0.99);
+}
+@media (hover: hover) {
+  .form-btn:hover {
+    background-color: #c06c84;
+    border: 1px solid #c06c84;
+  }
+}
+
+.overlay-close-modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  z-index: 1000;
 }/*# sourceMappingURL=style.css.map */
