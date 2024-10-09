@@ -381,16 +381,18 @@ export class Game {
 
   playSound(type) {
     audio.src = cardsJson[this.categoryName]['audio'][type];
+    audio.load();
     audio.play();
     audio.volume = 0.05;
   }
-
+  
   stopSound() {
     audio.pause();
   }
-
+  
   playSoundBg(type) {
     audioBgMusic.src = cardsJson[this.categoryName]['audio'][type];
+    audioBgMusic.load();
     audioBgMusic.play();
     audioBgMusic.volume = 0.05;
     audioBgMusic.loop = true;
