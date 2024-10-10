@@ -86,9 +86,15 @@ export class HistoryModalWindow {
     modalContent.classList.add('history__modal');
 
     let oneGame = '';
+    let keysAll = Object.keys(localStorage);
+    let keysMyLocalStorage = [];
 
-    let keys = Object.keys(localStorage);
-    keys.sort().reverse();
+    for (let i = 0; i < keysAll.length; i++) {
+      if (keysAll[i].startsWith('26b05b397f0748468a4')) {
+        keysMyLocalStorage.push(keysAll[i]);
+      }
+    }
+    keysMyLocalStorage.sort().reverse();
 
     oneGame = '';
     oneGame += `<p class="history__table-title">№</p>`;
@@ -99,10 +105,10 @@ export class HistoryModalWindow {
     oneGame += `<p class="history__table-title">Game time</p>`;
     template += `<div class="history__game">${oneGame}</div>`;
 
-    for (let i = 0; i < keys.length; i++) {
-      let gameStats = JSON.parse(localStorage.getItem(keys[i]));
+    for (let i = 0; i < keysMyLocalStorage.length; i++) {
+      let gameStats = JSON.parse(localStorage.getItem(keysMyLocalStorage[i]));
       oneGame = '';
-      oneGame += `<p class="history__table-text">${keys.length - i}</p>`;
+      oneGame += `<p class="history__table-text">${keysMyLocalStorage.length - i}</p>`;
       oneGame += `<p class="history__table-text">${formater.format(new Date(gameStats['timeOfUTC']))}</p>`;
       oneGame += `<p class="history__table-text">${Categories[gameStats['categoryName']]}</p>`;
       oneGame += `<p class="history__table-text">${gameStats['countOfCards']}</p>`;

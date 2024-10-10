@@ -803,7 +803,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  height: 620px;
+  height: 655px;
   width: 400px;
   background: Linear-gradient(rgb(73, 212, 254), rgb(13, 101, 237));
   background: #355c7d;
@@ -954,11 +954,11 @@ body {
   border-radius: 5px;
   width: 128px;
   height: 25px;
-  background-color: #f67280;
-  border: 1px solid #f67280;
+  background-color: #c06c84;
+  border: 1px solid #c06c84;
   box-shadow: 12px 12px 8px 0px rgba(34, 60, 80, 0.2);
   font-size: 15px;
-  color: white;
+  color: black;
   cursor: pointer;
   transform: scale(1);
 }
@@ -967,8 +967,8 @@ body {
 }
 @media (hover: hover) {
   .modal__feedBack-button:hover {
-    background-color: #c06c84;
-    border: 1px solid #c06c84;
+    background-color: #c07a8e;
+    border: 1px solid #c07a8e;
   }
 }
 
