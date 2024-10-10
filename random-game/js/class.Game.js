@@ -1,5 +1,5 @@
 import { cardsJson } from "./json.cards.js";
-import {shuffleArray} from "./utils.js";
+import {shuffleArray, LOCAL_STORAGE_PREFIX} from "./utils.js";
 import { Card } from './class.Cards.js';
 import { ModalWindow } from "./class.Modal-Window.js";
 import { GameAction } from "./enum.gameAction.js";
@@ -178,7 +178,7 @@ export class Game {
     let modal;    
     const timeText = document.querySelector('.main__time');
     let gameOverTime = Date.now();
-    localStorage.setItem(`26b05b397f0748468a4-${gameOverTime}`, JSON.stringify({'timeOfUTC' : gameOverTime,'numberOfMoves' : this.numberOfMoves, 'time' : timeText.innerHTML, 'categoryName' : this.categoryName, 'countOfCards' : this.totalCounter * 2}));
+    localStorage.setItem(`${LOCAL_STORAGE_PREFIX}-${gameOverTime}`, JSON.stringify({'timeOfUTC' : gameOverTime,'numberOfMoves' : this.numberOfMoves, 'time' : timeText.innerHTML, 'categoryName' : this.categoryName, 'countOfCards' : this.totalCounter * 2}));
     
     setTimeout(() => {
       modal = new ModalWindow(this.numberOfMoves, timeText.innerHTML, this.categoryName);
