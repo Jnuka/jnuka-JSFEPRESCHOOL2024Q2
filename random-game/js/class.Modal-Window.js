@@ -1,4 +1,6 @@
 import { FeedBackModal } from "./class.FeedBackModal.js";
+import {getLocalStorageKeys} from "./utils.js";
+
 
 export class ModalWindow {
   constructor(numberOfMoves, time, category) {
