@@ -1,5 +1,6 @@
 import { Game } from './class.Game.js';
 import { HistoryModalWindow } from "./class.History-Modal-Window.js";
+import { FeedBackModal } from "./class.FeedBackModal.js";
 
 export class StartScreen {
   constructor() {
@@ -18,6 +19,7 @@ export class StartScreen {
     this.textControls = '';
     this.startGameBtn = '';
     this.categoryName = 'simpsons';
+    this.modalfeedBackButton = '';
     this.bildStartScreenWindow();
   }
 
@@ -80,6 +82,10 @@ export class StartScreen {
     this.historyBtn.classList.add('main__button-history');
     this.historyBtn.innerHTML = 'History';
 
+    this.modalfeedBackButton = document.createElement('button');
+    this.modalfeedBackButton.classList.add('modal__feedBack-button');
+    this.modalfeedBackButton.innerHTML = 'Send FeedBack';
+
     this.appendStartScreenElements();
 
     this.buildEvents();
@@ -105,6 +111,7 @@ export class StartScreen {
     this.mainStart.append(this.controls);
     this.mainStart.append(this.startGameBtn);
     this.mainStart.append(this.historyBtn);
+    this.mainStart.append(this.modalfeedBackButton);
 
     this.content.append(this.mainStart);
   }
@@ -197,6 +204,11 @@ export class StartScreen {
 
     this.historyBtn.addEventListener('click', () => {
       new HistoryModalWindow();
+    })
+
+    this.modalfeedBackButton.addEventListener('click', () => {
+      this.closeModal;
+      new FeedBackModal(this.category);
     })
   }
 

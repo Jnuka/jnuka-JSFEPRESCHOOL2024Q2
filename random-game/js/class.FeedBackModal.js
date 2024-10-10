@@ -48,6 +48,30 @@ export class FeedBackModal {
 
   buildEvents() {
     this.overlay.addEventListener('click', (e) => this.closeModal(e));
+
+    let count = 0;
+    document.addEventListener('submit', (e) => {
+      if (count == 0) {
+        setTimeout(() => {
+          this.cleanElements();
+          const overlay = document.querySelector('.overlay');
+          overlay.remove();
+          document.body.classList.remove('body__no-scroll');
+          const mainStart = document.querySelector('.main__start-screen');
+          mainStart.style.display = 'flex';
+        }, 500);
+        count++;
+      } 
+    });
+  }
+
+  cleanElements() {
+    const inputForm = document.querySelector('.form-input');
+    const textareaForm = document.querySelectorAll('.form-textarea');
+    inputForm.value = '';
+    textareaForm[0].value = '';
+    textareaForm[1].value = '';
+    textareaForm[2].value = '';
   }
   
   closeModal(e) {

@@ -178,7 +178,7 @@ export class Game {
     let modal;    
     const timeText = document.querySelector('.main__time');
     let gameOverTime = Date.now();
-    localStorage.setItem(`MyGame-${gameOverTime}`, JSON.stringify({'timeOfUTC' : gameOverTime,'numberOfMoves' : this.numberOfMoves, 'time' : timeText.innerHTML, 'categoryName' : this.categoryName, 'countOfCards' : this.totalCounter * 2}));
+    localStorage.setItem(`26b05b397f0748468a4-${gameOverTime}`, JSON.stringify({'timeOfUTC' : gameOverTime,'numberOfMoves' : this.numberOfMoves, 'time' : timeText.innerHTML, 'categoryName' : this.categoryName, 'countOfCards' : this.totalCounter * 2}));
     
     setTimeout(() => {
       modal = new ModalWindow(this.numberOfMoves, timeText.innerHTML, this.categoryName);
