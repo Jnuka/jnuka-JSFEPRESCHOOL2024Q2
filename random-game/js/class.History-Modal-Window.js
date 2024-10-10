@@ -46,9 +46,6 @@ export class HistoryModalWindow {
   
   setContent() {
     this.historyWrapper.append(this.generateModalTemplate());
-    
-    let keys = Object.keys(localStorage);
-    keys.sort().reverse();
   }
 
   appendHistoryModalElements() {
@@ -86,15 +83,9 @@ export class HistoryModalWindow {
     modalContent.classList.add('history__modal');
 
     let oneGame = '';
-    let keysAll = Object.keys(localStorage);
-    let keysMyLocalStorage = [];
 
-    for (let i = 0; i < keysAll.length; i++) {
-      if (keysAll[i].startsWith('26b05b397f0748468a4')) {
-        keysMyLocalStorage.push(keysAll[i]);
-      }
-    }
-    keysMyLocalStorage.sort().reverse();
+    let keysMyLocalStorage = getLocalStorageKeys();
+
 
     oneGame = '';
     oneGame += `<p class="history__table-title">№</p>`;

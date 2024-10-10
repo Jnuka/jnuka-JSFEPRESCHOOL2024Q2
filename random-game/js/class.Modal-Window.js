@@ -48,8 +48,7 @@ export class ModalWindow {
   setContent() {
     this.modalWrapper.append(this.generateModalTemplate());
     
-    let keys = Object.keys(localStorage);
-    keys.sort().reverse();
+    let keys = getLocalStorageKeys();
     
     if (keys.length >= 10) {
       for (let i = 10; i < keys.length; i++) {

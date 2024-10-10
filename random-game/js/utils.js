@@ -8,3 +8,16 @@ export const shuffleArray = (arr) => {
   }
   return array;
 }
+
+export const LOCAL_STORAGE_PREFIX = '26b05b397f0748468a4';
+
+export const getLocalStorageKeys = () => {
+  let keysAll = Object.keys(localStorage);
+  let keysMyLocalStorage = [];
+  for (let i = 0; i < keysAll.length; i++) {
+    if (keysAll[i].startsWith('26b05b397f0748468a4')) {
+      keysMyLocalStorage.push(keysAll[i]);
+    }
+  }
+  return keysMyLocalStorage.sort().reverse();
+}
